@@ -57,6 +57,12 @@ public class Robobar2Test {
     // Step # | name | target | value
     // 1 | open | / | 
     driver.get("http://localhost:3000/#!/");
+
+    {
+      WebDriverWait wait = new WebDriverWait(driver, 30);
+      wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ng-scope:nth-child(1) > td .input-group-append > .btn")));
+    }
+
     // 2 | click | css=.ng-scope:nth-child(1) > td .input-group-append > .btn |
     driver.findElement(By.cssSelector(".ng-scope:nth-child(1) > td .input-group-append > .btn")).click();
     // 3 | storeText | css=tr:nth-child(4) > .ng-binding | total
