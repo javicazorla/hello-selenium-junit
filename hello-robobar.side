@@ -1,0 +1,263 @@
+{
+  "id": "23f5c596-e255-4078-a04c-37320756a0a5",
+  "version": "2.0",
+  "name": "hello-robobar",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "f62b21bc-b140-4f37-b130-7d251a532b59",
+    "name": "robobar",
+    "commands": [{
+      "id": "ec2e6d64-102b-4c92-876b-7659a42af37f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca57dec0-1ac7-4498-b545-82ba2374cf60",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "835x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44dc30f8-d0b7-4fb4-8b69-10e79ed3697d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-scope:nth-child(1) > td .input-group-append > .btn",
+      "targets": [
+        ["css=.ng-scope:nth-child(1) > td .input-group-append > .btn", "css:finder"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bcf95bf-e282-469a-967d-5f5f1e05f10b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-scope:nth-child(2) > td .input-group-append > .btn",
+      "targets": [
+        ["css=.ng-scope:nth-child(2) > td .input-group-append > .btn", "css:finder"],
+        ["xpath=//tr[2]/td[3]/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9057fd99-fa10-4e35-8760-b1115ad0fa2e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-scope:nth-child(3) .input-group-append > .btn",
+      "targets": [
+        ["css=.ng-scope:nth-child(3) .input-group-append > .btn", "css:finder"],
+        ["xpath=//tr[3]/td[3]/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b2b8b4a-8dc7-4edf-8c4c-f5d7f17a40d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5d3d810-7e86-4926-b74c-ea84892ace8d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ad5add5-a2bd-4bf6-9809-70429d0666c5",
+      "comment": "",
+      "command": "click",
+      "target": "id=ageInput",
+      "targets": [
+        ["id=ageInput", "id"],
+        ["css=#ageInput", "css:finder"],
+        ["xpath=//input[@id='ageInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e8116a3-b4d9-4e88-b9b3-b61be4024743",
+      "comment": "",
+      "command": "type",
+      "target": "id=ageInput",
+      "targets": [
+        ["id=ageInput", "id"],
+        ["css=#ageInput", "css:finder"],
+        ["xpath=//input[@id='ageInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "21"
+    }, {
+      "id": "b01e1167-b7ec-4f2b-8e72-da37bb990629",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "98a81fc5-4c4f-4a7e-911c-783a1de7d38b",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9beb6c63-59a6-486f-b217-52d854f2bab0",
+    "name": "robobar2",
+    "commands": [{
+      "id": "3490a371-9f23-4b69-bade-d462327e187f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d50d00f-2876-49b3-a502-c69fb605bfc2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-scope:nth-child(1) > td .input-group-append > .btn",
+      "targets": [
+        ["css=.ng-scope:nth-child(1) > td .input-group-append > .btn", "css:finder"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "682bca96-9d05-479e-aa99-9588909f05ab",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tr:nth-child(4) > .ng-binding",
+      "targets": [],
+      "value": "total"
+    }, {
+      "id": "b23ff852-aec9-4bcb-b5a1-cd1ee415694e",
+      "comment": "",
+      "command": "echo",
+      "target": "total=${total}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "662ed3f8-19d2-4d78-a0c2-3de8e43599c1",
+      "comment": "",
+      "command": "assert",
+      "target": "total",
+      "targets": [],
+      "value": "€1.25"
+    }, {
+      "id": "5db44649-ee07-479e-8634-82eb08d93553",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-scope:nth-child(2) > td .input-group-append > .btn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dec1726a-4916-4413-8f7b-19cb5fd8d402",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tr:nth-child(4) > .ng-binding",
+      "targets": [],
+      "value": "total"
+    }, {
+      "id": "b1ea31db-c44c-4a1e-ab00-33e3d4fdf079",
+      "comment": "",
+      "command": "echo",
+      "target": "total=${total}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "056fe18a-a28a-4359-9669-21656f0e4a33",
+      "comment": "",
+      "command": "assert",
+      "target": "total",
+      "targets": [],
+      "value": "€3.25"
+    }, {
+      "id": "d825d5b5-4edd-417a-af5b-617842b64870",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-scope:nth-child(3) .input-group-append > .btn",
+      "targets": [
+        ["css=.ng-scope:nth-child(3) .input-group-append > .btn", "css:finder"],
+        ["xpath=//tr[3]/td[3]/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "252c9772-115e-4383-91b5-9e3dcf2185bc",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tr:nth-child(4) > .ng-binding",
+      "targets": [],
+      "value": "total"
+    }, {
+      "id": "bdf73ae9-0f91-4018-8be8-1843c1f0d182",
+      "comment": "",
+      "command": "echo",
+      "target": "total=${total}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c97a9b25-1c97-4924-bfa4-2aa16802c89f",
+      "comment": "",
+      "command": "assert",
+      "target": "total",
+      "targets": [],
+      "value": "€6.25"
+    }, {
+      "id": "80b81638-8053-4432-9d75-fdd2f7553c7a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit order')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c85e8611-f17a-43fe-ba06-dff20325fec6",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.display-4 > .text-muted",
+      "targets": [],
+      "value": "drinks"
+    }, {
+      "id": "bc2d842c-a006-4619-844c-0a822d85b78f",
+      "comment": "",
+      "command": "echo",
+      "target": "drinks=${drinks}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9141878a-9831-4e60-9510-17cd644ed65e",
+      "comment": "",
+      "command": "assert",
+      "target": "drinks",
+      "targets": [],
+      "value": "- 3 drinks"
+    }]
+  }],
+  "suites": [{
+    "id": "b0475917-a9e5-4f83-86a3-663e6f31b604",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f62b21bc-b140-4f37-b130-7d251a532b59"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}
