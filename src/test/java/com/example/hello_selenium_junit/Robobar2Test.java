@@ -40,6 +40,7 @@ public class Robobar2Test {
     options.setHeadless(true);
     driver = new FirefoxDriver(options);
      */
+
     Configuration.startMaximized = true;
     open("about:blank");
     driver = getWebDriver();
@@ -52,11 +53,15 @@ public class Robobar2Test {
     driver.quit();
   }
   @Test
-  public void robobar2() {
+  public void robobar2() throws MalformedURLException {
+
+    FirefoxOptions firefoxOptions = new FirefoxOptions();
+    WebDriver driver = new RemoteWebDriver(new URL("http://172.28.0.1:4444/"), firefoxOptions);
+
     // Test name: robobar2
     // Step # | name | target | value
     // 1 | open | / | 
-    driver.get("http://localhost:3000/#!/");
+    driver.get("http://10.250.4.2:3000/#!/");
 
     {
       WebDriverWait wait = new WebDriverWait(driver, 30);
