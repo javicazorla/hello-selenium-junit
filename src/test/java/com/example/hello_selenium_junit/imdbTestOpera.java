@@ -37,16 +37,18 @@ public class imdbTestOpera {
     private Map<String, Object> vars;
     JavascriptExecutor js;
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws MalformedURLException {
         /*
         FirefoxOptions options = new FirefoxOptions();
         options.setHeadless(true);
         driver = new FirefoxDriver(options);
-        */
-
         Configuration.startMaximized = true;
         open("about:blank");
         driver = getWebDriver();
+        */
+
+        OperaOptions operaOptions = new OperaOptions();
+        driver = new RemoteWebDriver(new URL("http://172.28.0.1:4444/wd/hub/"), operaOptions);
 
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
@@ -57,9 +59,6 @@ public class imdbTestOpera {
     }
     @Test
     public void imdbwandavision() throws MalformedURLException {
-
-        OperaOptions operaOptions = new OperaOptions();
-        WebDriver driver = new RemoteWebDriver(new URL("http://172.28.0.1:4444/"), operaOptions);
 
         // Test name: imdb-wandavision
         // Step # | name | target | value
@@ -72,7 +71,7 @@ public class imdbTestOpera {
 
         WebElement wandaresult = new WebDriverWait(driver,10).
                 until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),\'WandaVision\')]")));
-
+/*
         // 4 | click | css=.\_2mXTyZmtWnrwCBj9tuEhuK .\_2NPnhnjxKTlB8HDsb7RtwX |
         driver.findElement(By.xpath("//a[contains(text(),\'WandaVision\')]")).click();
         // 5 | click | css=.bp_content |
@@ -81,6 +80,6 @@ public class imdbTestOpera {
         WebElement trivialink = new WebDriverWait(driver,10).
                 until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),\'WandaVision\')]")));
         driver.findElement(By.xpath("//a[contains(text(),\'TRIVIA\')]")).click();
-
+*/
     }
 }

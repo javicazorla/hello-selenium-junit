@@ -29,21 +29,25 @@ import org.openqa.selenium.Keys;
 import java.util.*;
 import java.net.MalformedURLException;
 import java.net.URL;
+
 public class Robobar2Test {
   private WebDriver driver;
   private Map<String, Object> vars;
   JavascriptExecutor js;
+
   @BeforeEach
-  public void setUp() {
+  public void setUp() throws MalformedURLException {
     /*
     FirefoxOptions options = new FirefoxOptions();
     options.setHeadless(true);
     driver = new FirefoxDriver(options);
-     */
-
+    driver = getWebDriver();
     Configuration.startMaximized = true;
     open("about:blank");
-    driver = getWebDriver();
+     */
+
+    FirefoxOptions firefoxOptions = new FirefoxOptions();
+    driver = new RemoteWebDriver(new URL("http://172.28.0.1:4444/"), firefoxOptions);
 
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();
@@ -54,9 +58,6 @@ public class Robobar2Test {
   }
   @Test
   public void robobar2() throws MalformedURLException {
-
-    FirefoxOptions firefoxOptions = new FirefoxOptions();
-    WebDriver driver = new RemoteWebDriver(new URL("http://172.28.0.1:4444/"), firefoxOptions);
 
     // Test name: robobar2
     // Step # | name | target | value
