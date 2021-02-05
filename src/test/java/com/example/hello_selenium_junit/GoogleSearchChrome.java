@@ -10,6 +10,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -38,10 +39,14 @@ public class GoogleSearchChrome {
     driver = getWebDriver();
     FirefoxOptions firefoxOptions = new FirefoxOptions();
     WebDriver driver = new RemoteWebDriver(new URL("http://172.28.0.1:4444/wd/hub/"), firefoxOptions);
-    */
+
 
     ChromeOptions chromeOptions = new ChromeOptions();
     driver = new RemoteWebDriver(new URL("http://172.28.0.1:4444/wd/hub/"), chromeOptions);
+  */
+    DesiredCapabilities capabilities = new DesiredCapabilities();
+    capabilities.setBrowserName(System.getProperty("browser","firefox"));
+    driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub/"),capabilities);
 
     js = (JavascriptExecutor) driver;
     vars = new HashMap<String, Object>();

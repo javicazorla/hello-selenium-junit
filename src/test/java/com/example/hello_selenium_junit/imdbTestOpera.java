@@ -45,10 +45,15 @@ public class imdbTestOpera {
         Configuration.startMaximized = true;
         open("about:blank");
         driver = getWebDriver();
-        */
+
 
         OperaOptions operaOptions = new OperaOptions();
         driver = new RemoteWebDriver(new URL("http://172.28.0.1:4444/wd/hub/"), operaOptions);
+        */
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setBrowserName(System.getProperty("browser","firefox"));
+        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub/"),capabilities);
 
         js = (JavascriptExecutor) driver;
         vars = new HashMap<String, Object>();
