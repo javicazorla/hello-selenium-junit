@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        SERVER = 'http://10.250.4.2:4444'
+        BROWSER = 'firefox'
+    }
+
     stages {
         stage('Build') {
 
@@ -22,7 +27,7 @@ pipeline {
 
             steps { 
                 withGradle {
-                    sh './gradlew test'
+                    sh './gradlew test -Premote_server=${SERVER} -Pbrowser=${BROWSER}'
                 }
             }
 
