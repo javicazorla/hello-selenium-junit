@@ -28,7 +28,7 @@ pipeline {
             steps { 
 
                 withGradle {
-                    sh './gradlew test -Premote_server=${SERVER} -Pbrowser=${BROWSER}'
+                    sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=${BROWSER}'
                     sh './gradlew check'
                 }
             }
