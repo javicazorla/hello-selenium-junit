@@ -31,6 +31,16 @@ pipeline {
                     sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=${BROWSER}'
                     sh './gradlew check'
                 }
+
+                [$class: 'CheckStylePublisher',
+                        canRunOnFailed: true,
+                        defaultEncoding: '',
+                        healthy: '',
+                        pattern: '',
+                        unHealthy: '',
+                        useStableBuildAsReference: true
+                ])
+
             }
 
             post {
