@@ -1,8 +1,0 @@
-com/example/hello_selenium_junit/GoogleSearchChrome.java
- com.example.hello_selenium_junit.GoogleSearchChrome
-com/example/hello_selenium_junit/Robobar2Test.java
- com.example.hello_selenium_junit.Robobar2Test
-com/example/hello_selenium_junit/GoogleSearchFirefox.java
- com.example.hello_selenium_junit.GoogleSearchFirefox
-com/example/hello_selenium_junit/imdbTestOpera.java
- com.example.hello_selenium_junit.imdbTestOpera
