@@ -32,15 +32,14 @@ pipeline {
                     sh './gradlew check'
                 }
 
-                [$class: 'CheckStylePublisher',
+                step()[$class: 'CheckStylePublisher',
                         canRunOnFailed: true,
                         defaultEncoding: '',
                         healthy: '',
                         pattern: '',
                         unHealthy: '',
                         useStableBuildAsReference: true
-                ])
-
+                    ])
             }
 
             post {
