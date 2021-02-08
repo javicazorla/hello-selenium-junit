@@ -29,14 +29,17 @@ pipeline {
 
                 withGradle {
                     sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=${BROWSER}'
-                    sh './gradlew clean check'
+                    sh './gradlew check'
                 }
             }
 
             post {
                 always {
                     junit 'build/test-results/test/TEST-*.xml'
-                    recordIssues(tools: [checkStyle()])
+                    recordIssues(
+                        enabledForFailure: true,
+                        tool: checkStyle(pattern: 'build/reports/checkstyle/*.xml')
+                    )
                 }
             }
         }
