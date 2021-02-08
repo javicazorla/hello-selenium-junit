@@ -47,5 +47,6 @@ allure {
 }
 
 checkstyle {
-    ignoreFailures = true 
+    config = rootProject.resources.text.fromFile('config/checkstyle/checkstyle.xml')
+    ignoreFailures = true
 }
