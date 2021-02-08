@@ -29,17 +29,8 @@ pipeline {
 
                 withGradle {
                     sh './gradlew clean test -Premote_server=${SERVER} -Pbrowser=${BROWSER}'
-                    sh './gradlew check'
+                    sh './gradlew clean check'
                 }
-
-                step([$class: 'CheckStylePublisher',
-                        canRunOnFailed: true,
-                        defaultEncoding: '',
-                        healthy: '',
-                        pattern: '',
-                        unHealthy: '',
-                        useStableBuildAsReference: true
-                    ])
             }
 
             post {
